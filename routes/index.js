@@ -24,4 +24,11 @@ router.get('/demo2/(:id)/(:category)', function(req, res, next){
 	});
 });
 
+router.get('/demo3', function(req, res, next) {
+  res.json({ 
+                message: 'Lorem ipsum sit dolor amet', 
+                user: {name: 'Ryan', email: 'mail@ryan.apokpak.com', website: 'http://ryanalfi.net/'} 
+        });
+});
+
 module.exports = router;
