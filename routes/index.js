@@ -63,4 +63,12 @@ router.put('/demo5/', function (req, res, next){
         );
 });
 
+router.delete('/demo6/', function (req, res, next){
+  res.json(
+            {
+              message: "request DELETE is executed"
+            }
+        );
+});
+
 module.exports = router;
