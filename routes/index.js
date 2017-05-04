@@ -49,4 +49,18 @@ router.post('/demo4/', function (req, res, next){
         );
 });
 
+router.put('/demo5/', function (req, res, next){
+  res.json(
+            {
+              message: "request PUT is executed",
+              data: { 
+                username: req.param('username'), 
+                email: req.param('email'), 
+                website: req.param('website'), 
+                phone: req.param('phone'), 
+              }
+            }
+        );
+});
+
 module.exports = router;
