@@ -71,4 +71,12 @@ router.delete('/demo6/', function (req, res, next){
         );
 });
 
+router.get('/demo7', function (req, res, next){
+    res.redirect('/demo7_result');
+});
+
+router.get('/demo7_result', function (req, res, next){
+    res.render('demo7');
+});
+
 module.exports = router;
