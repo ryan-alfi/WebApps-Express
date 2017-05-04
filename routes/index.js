@@ -31,4 +31,22 @@ router.get('/demo3', function(req, res, next) {
         });
 });
 
+router.get('/demo4/', function (req, res, next){
+  res.render('demo4');
+});
+
+router.post('/demo4/', function (req, res, next){
+  res.json(
+            {
+              message: "request POST is executed",
+              data: { 
+                username: req.param('username'), 
+                email: req.param('email'), 
+                website: req.param('website'), 
+                phone: req.param('phone'), 
+              }
+            }
+        );
+});
+
 module.exports = router;
