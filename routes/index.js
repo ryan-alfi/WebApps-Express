@@ -16,4 +16,12 @@ router.get('/demo1', function(req, res, next) {
 	});
 });
 
+router.get('/demo2/(:id)/(:category)', function(req, res, next){
+	res.render('demo2',
+	{
+		id: req.params.id,
+		category: req.params.category,
+	});
+});
+
 module.exports = router;
